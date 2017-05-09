@@ -7,7 +7,6 @@ fs.readFile("keys.js", "utf8", function(error, data) {
     // Then split it by commas
     var dataArr = data.split(":");
 });
-
 //user enters node liri.js THEN whatever function he wants to run ex: node liri.js my-tweets
 function pickCommand(caseData, functionData) {
     switch (caseData) {
@@ -49,7 +48,6 @@ function twitterFunction() {
         }
     });
 };
-
 // ----------------spotify-------------------------
 //enter a song, spits out info about the song
 
@@ -63,10 +61,9 @@ function spotifyFunction() {
     if (process.argv.length > 2) {
         for (var i = 3; i < process.argv.length; i++) {
             songName += process.argv[i] += "+"
-                // console.log(songName);
+            // songName= songName + process.argv[i] + process.argv[i] + '+'
             multiWordSong = songName.slice(0, -1);
         }
-
         spotifyQueryUrl = "https://api.spotify.com/v1/search?q=" + multiWordSong + "&type=track"
         console.log(spotifyQueryUrl);
         //the request has the console.logs which print the information we want
@@ -77,12 +74,10 @@ function spotifyFunction() {
             console.log("link: " + JSON.parse(body).tracks.items[0].external_urls.spotify);
         });
     }
-
     //if user does not enter a specific song, link to the danger zone song
     else if (process.argv[3] = "") {
         dangerZone = "https://api.spotify.com/v1/search?q=danger+zone&type=track"
             // console.log(dangerZone);
-
         //the request has the console.logs which print the information we want just for DangerZone
         request(dangerZone, function(error, response, body) {
             console.log("Name: " + JSON.parse(body).tracks.items[0].name);
@@ -92,7 +87,6 @@ function spotifyFunction() {
         });
     }
 };
-
 //----------------movies-------------------------
 //enter movie name, get information back
 function getMyMoviesFunction() {
@@ -110,7 +104,7 @@ function getMyMoviesFunction() {
     }
     // connect to omdb- the search will use the queryURL
     var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&r=json";
-    // default will use mrNobody
+    //the broken searches which need a default will use mrNobody
     var mrNobody = "http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&r=json";
     request(queryUrl, function(error, response, body) {
         // If the request is successful, print the info we want:
@@ -125,7 +119,7 @@ function getMyMoviesFunction() {
             console.log("Actors: " + JSON.parse(body).Actors);
 
             //if no movie name entered
-        } else if (queryUrl === "") {
+        } if (queryUrl === "") {
             request(mrNobody, function(error, response, body) {
                 console.log("your input was not valid, so here is our default suggestion:");
                 console.log("\n ************\n");
@@ -164,4 +158,3 @@ function doItFunction() {
         }
     });
 };
-
