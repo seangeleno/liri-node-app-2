@@ -4,7 +4,14 @@ exports.twitterKeys = {
   consumer_key: 'wJBFo5zaO4W8b0r4ZXPkLvJFi',
   consumer_secret: 'kZtQBkwRoH1CnilMzHzJrXdNdKW66mgFZFKiUjBu5utOcgH8WW',
   access_token_key: '860242137966813184-iM2aWxwmc648Z6IlcAbxc4Ru18n7cKs',
-  access_token_secret: 'PQW2XQ8dUlUsaVrMXYLOvUIEOdQoYvDy9eCm47vRLZTOM',
+  access_token_secret: 'PQW2XQ8dUlUsaVrMXYLOvUIEOdQoYvDy9eCm47vRLZTOM'
+};
+
+exports.twitterKeys = {
+    consumer_key: 'wJBFo5zaO4W8b0r4ZXPkLvJFi',
+    consumer_secret: 'kZtQBkwRoH1CnilMzHzJrXdNdKW66mgFZFKiUjBu5utOcgH8WW',
+    access_token_key: '860242137966813184-iM2aWxwmc648Z6IlcAbxc4Ru18n7cKs',
+    access_token_secret: 'PQW2XQ8dUlUsaVrMXYLOvUIEOdQoYvDy9eCm47vRLZTOM'
 };
 
 

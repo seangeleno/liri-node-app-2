@@ -1,0 +1,28 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keys.js",
+  "dependencies": {
+    "request": "^2.81.0",
+    "require": "^2.4.20",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "mytweets": "node liri.js my-tweets",
+    "spotify": "node liri.js spotify-this-song madonna",
+    "imdb": "node liri.js movie-this"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hneriya/liri-node-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hneriya/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/hneriya/liri-node-app#readme"
+}
